@@ -14,6 +14,7 @@ var forecastIcon = {};
 var forecastTemp = {};
 var forecastHum = {};
 var today = moment().format('MM' + "/" + 'DD' + '/' + 'YYYY');
+
 //API Key from OpenWeather
 var APIKey = "&units=imperial&APPID=e334ca0ec3c7c1d4dad9064c8d7ebff6";
 var url =  "https://api.openweathermap.org/data/2.5/weather?q=";
@@ -141,7 +142,7 @@ function currentWeather(userInput) {
             
             }
 
-            //Previous/last searches
+            //Previous searches
             function lastSearch () {
                 buttonList.empty()
                 for (var i = 0; i < citiesArray.length; i ++) {
@@ -159,7 +160,7 @@ function currentWeather(userInput) {
             
             }
             
-            //Clicking the search button
+            //Search button
             $(".btn").on("click", function (event){
                 event.preventDefault();
                 if ($("#searchInput").val() === "") {
